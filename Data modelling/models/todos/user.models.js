@@ -7,11 +7,12 @@ const userSchema =new mongoose.Schema({
       required:true,
       unique:true,
       lowercase:true
-    }
+    },
 
     password:{
       type :String,
-      required:true,
+      required:[true,"Password is required"],
+
       unique:true
     },
     role:{
